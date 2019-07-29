@@ -27,11 +27,20 @@
    <% end %>
     </li>
     <li class="nav-item active background-slate">
-    <a class="nav-link nav-icon" href="/"><%= image_tag "BW- ADD USER ICON.svg", alt:"Add an Item" %><p>ADD ITEM</p></a></li>
+      <%= link_to new_user_registration_path, class: 'nav-link nav-icon' do %>
+   <%= image_tag "BW- ADD USER ICON.svg", alt:"Add an Item" %><p>ADD ITEM</p>
+   <% end %>
+    </li>
     <li class="nav-item active background-dark-purple">
-    <a class="nav-link nav-icon" href="/"><%= image_tag "BW- CART ICON.svg", alt:"Cart" %><p>CHECK IN/OUT</p></a></li>
+      <%= link_to new_user_registration_path, class: 'nav-link nav-icon' do %>
+   <%= image_tag "BW- CART ICON.svg", alt:"Check In/Out" %><p>CHECK IN/OUT</p>
+   <% end %>
+    </li>
     <li class="nav-item active background-purple">
-    <a class="nav-link nav-icon" href="/"><%= image_tag "BW - INVENTORY ICON.svg", alt:"View Inventory" %><p>INVENTORY</p></a></li>
+    <%= link_to new_user_registration_path, class: 'nav-link nav-icon' do %>
+   <%= image_tag "BW - INVENTORY ICON.svg", alt:"View Inventory" %><p>INVENTORY</p>
+   <% end %>
+    </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Quick Access
