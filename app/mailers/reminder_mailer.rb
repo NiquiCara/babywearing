@@ -14,5 +14,16 @@ class ReminderMailer < ApplicationMailer
     @carrier_name = carrier_name
     @current_location = current_location
     mail(to: @user.email, subject: 'Carrier Return Is Now Due')
+  end 
+  
+  def successful_checkout_email(user, carrier, due_date)
+    @user = user
+    @first_name = user.full_name
+    @carrier_name = carrier.name
+    @category = carrier.category.name
+    @color = carrier.color
+    @item_id = carrier.item_id
+    @due_date = due_date
+    mail(to: @user.email, subject: "You've Successfully Checked Out #{@carrier_name}")
   end
 end
