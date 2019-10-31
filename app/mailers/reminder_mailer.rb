@@ -1,6 +1,10 @@
 class ReminderMailer < ApplicationMailer
-  def welcome_email(user)
+  def overdue_email(user, carrier_name, current_location, due_date)
     @user = user
-    mail(to: @user.email, subject: 'Babywearing Account Registration')
+    @first_name = user.full_name
+    @carrier_name = carrier_name
+    @current_location = current_location
+    @due_date = due_date
+    mail(to: @user.email, subject: 'Baby Carrier Overdue For Return')
   end
 end
